@@ -1,0 +1,20 @@
+{
+  "name": "currency_converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "4.0.0",
+    "html-webpack-plugin": "5.6.8",
+    "typescript": "6.0.3",
+    "webpack": "5.109.2",
+    "webpack-cli": "7.2.2"
+  },
+  "private": true,
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

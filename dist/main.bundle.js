@@ -1,0 +1,1 @@
+(()=>{const t=document.createElement("h1");t.textContent="Interesting!";const e=document.querySelector("#root");if(!e)throw new Error("Root element #root not found");e.append(t)})();
