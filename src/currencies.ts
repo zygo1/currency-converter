@@ -1,0 +1,30 @@
+export const CURRENCIES = [
+    { code: 'EUR', name: 'Euro',                 flag: '🇪🇺', decimals: 2 },
+    { code: 'USD', name: 'US dollar',            flag: '🇺🇸', decimals: 2 },
+    { code: 'GBP', name: 'British pound',        flag: '🇬🇧', decimals: 2 },
+    { code: 'JPY', name: 'Japanese yen',         flag: '🇯🇵', decimals: 0 },
+    { code: 'CHF', name: 'Swiss franc',          flag: '🇨🇭', decimals: 2 },
+    { code: 'AUD', name: 'Australian dollar',    flag: '🇦🇺', decimals: 2 },
+    { code: 'CAD', name: 'Canadian dollar',      flag: '🇨🇦', decimals: 2 },
+    { code: 'NZD', name: 'New Zealand dollar',   flag: '🇳🇿', decimals: 2 },
+    { code: 'CNY', name: 'Chinese yuan',         flag: '🇨🇳', decimals: 2 },
+    { code: 'HKD', name: 'Hong Kong dollar',     flag: '🇭🇰', decimals: 2 },
+    { code: 'SGD', name: 'Singapore dollar',     flag: '🇸🇬', decimals: 2 },
+    { code: 'INR', name: 'Indian rupee',         flag: '🇮🇳', decimals: 2 },
+    { code: 'KRW', name: 'South Korean won',     flag: '🇰🇷', decimals: 0 },
+    { code: 'SEK', name: 'Swedish krona',        flag: '🇸🇪', decimals: 2 },
+    { code: 'NOK', name: 'Norwegian krone',      flag: '🇳🇴', decimals: 2 },
+    { code: 'DKK', name: 'Danish krone',         flag: '🇩🇰', decimals: 2 },
+    { code: 'PLN', name: 'Polish złoty',         flag: '🇵🇱', decimals: 2 },
+    { code: 'CZK', name: 'Czech koruna',         flag: '🇨🇿', decimals: 2 },
+    { code: 'HUF', name: 'Hungarian forint',     flag: '🇭🇺', decimals: 2 },
+    { code: 'RON', name: 'Romanian leu',         flag: '🇷🇴', decimals: 2 },
+    { code: 'TRY', name: 'Turkish lira',         flag: '🇹🇷', decimals: 2 },
+    { code: 'ZAR', name: 'South African rand',   flag: '🇿🇦', decimals: 2 },
+    { code: 'BRL', name: 'Brazilian real',       flag: '🇧🇷', decimals: 2 },
+    { code: 'MXN', name: 'Mexican peso',         flag: '🇲🇽', decimals: 2 },
+    { code: 'AED', name: 'UAE dirham',           flag: '🇦🇪', decimals: 2 },
+] as const
+
+export type Currency = typeof CURRENCIES[number]
+export type CurrencyCode = Currency['code']
