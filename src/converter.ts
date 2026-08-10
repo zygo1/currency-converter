@@ -18,6 +18,8 @@ export function converter(
     throw new Error(`Invalid amount: ${amount}`);
   }
 
+  // Το throw σημαίνει ότι το UI πρέπει να έχει try/catch ή error boundary.
+  // Το null σημαίνει ότι πρέπει να ελέγχει κάθε φορά. Δεν υπάρχει καθαρά σωστή απάντηση
   const rate = toEntry.rate / fromEntry.rate;
 
   const oldestDate =

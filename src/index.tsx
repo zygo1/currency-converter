@@ -1,15 +1,34 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import styled from "styled-components";
-import { getRates } from "./api/rates";
-
-const Title = styled.h1`
-  color: rebeccapurple;
-`;
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { theme } from "./theme";
+import { App } from "./App";
 
 const container = document.querySelector("#root");
 if (!container) throw new Error("Root element #root not found");
 
-const rates = getRates();
-rates.then(console.log).catch(console.error);
-createRoot(container).render(<Title>It works</Title>);
+const GlobalStyle = createGlobalStyle`
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: ${(p) => p.theme.colors.bg};
+    color: ${(p) => p.theme.colors.text};
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  #root {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+createRoot(container).render(
+  <ThemeProvider theme={theme.dark}>
+    <GlobalStyle />
+    <App />
+  </ThemeProvider>,
+);
