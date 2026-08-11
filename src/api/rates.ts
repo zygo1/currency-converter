@@ -15,9 +15,7 @@ export type RatesSnapshot = {
 };
 
 export async function getRates(): Promise<RatesSnapshot> {
-  const url = new URL(API);
-
-  const response = await fetch(url);
+  const response = await fetch(API);
 
   if (!response.ok) {
     throw new Error(`Failed to fetch the data.`);
